@@ -1,22 +1,27 @@
 #include <Arduino.h>
+
 /**
  * @file main.cpp
  * @brief Embedded Obstacle Detection System using IR Sensor
- * @author YOUR_NAME
- * @date YYYY-MM-DD
+ * @author Piyush
+ * @date 2026-02-19
  *
  * @details
  * Reads digital input from IR sensor
  * and detects obstacle presence.
  */
 
- // TODO 1:
- // Define IR sensor digital pin (Use pin 2)
- const int IR_PIN = 2;
- // TODO 2:
- // Create variable to store sensor state
- int irState = 0;
+// TODO 1:
+// Define IR sensor digital pin (Use pin 2)
+const int IR_PIN = 2;
 
+// TODO 2:
+// Create variable to store sensor state
+int irState = 0;
+
+/**
+ * @brief Arduino setup function
+ */
 void setup() {
 
     // TODO 3:
@@ -29,11 +34,15 @@ void setup() {
 
     // TODO 5:
     // Print system initialization message
-    Serial.println("IR Obstacle Detection System Initialized");
+    Serial.println("===============================");
+    Serial.println(" IR Obstacle Detection System ");
+    Serial.println("===============================");
 }
 
+/**
+ * @brief Arduino main loop function
+ */
 void loop() {
-
 
     // TODO 6:
     // Read digital value from IR sensor
@@ -42,16 +51,16 @@ void loop() {
     // TODO 7:
     // If obstacle detected
     //     Print "Obstacle Detected"
+    // Else
+    //     Print "No Obstacle"
     if (irState == LOW) {
         Serial.println("Obstacle Detected");
     }
-    //     Print "No Obstacle"
     else {
         Serial.println("No Obstacle");
     }
 
-
-
     // TODO 8:
     // Add small delay (200–500ms)
+    delay(300);
 }
