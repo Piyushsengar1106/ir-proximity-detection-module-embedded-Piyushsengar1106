@@ -34,14 +34,23 @@ void setup() {
 
 void loop() {
 
+
     // TODO 6:
     // Read digital value from IR sensor
+    irState = digitalRead(IR_PIN);
 
     // TODO 7:
     // If obstacle detected
     //     Print "Obstacle Detected"
-    // Else
+    if (irState == LOW) {
+        Serial.println("Obstacle Detected");
+    }
     //     Print "No Obstacle"
+    else {
+        Serial.println("No Obstacle");
+    }
+
+
 
     // TODO 8:
     // Add small delay (200–500ms)
