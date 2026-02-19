@@ -3,7 +3,7 @@
 /**
  * @file main.cpp
  * @brief Embedded Obstacle Detection System using IR Sensor
- * @author Piyush
+ * @author Piyush-sengar
  * @date 2026-02-19
  *
  * @details
@@ -13,7 +13,8 @@
 
 // TODO 1:
 // Define IR sensor digital pin (Use pin 2)
-const int IR_PIN = 2;
+constexpr int IR_PIN = 2;
+
 
 // TODO 2:
 // Create variable to store sensor state
